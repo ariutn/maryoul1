@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب نقاط نوادي كرة القدم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container">
+        <h1>موقع حساب نقاط النوادي</h1>
+
+        <div class="club-input-section">
+            <label for="clubLogoInput">
+                <i class="fas fa-image"></i>
+            </label>
+            <input type="file" id="clubLogoInput" accept="image/*">
+            <input type="text" id="clubNameInput" placeholder="اسم النادي">
+            <button class="add-club-btn" onclick="addClub()">أضف نادي</button>
+        </div>
+
+        <div class="clubs-list" id="clubsList">
+            </div>
+
+        <div class="timer-section">
+            <h2>الموقت</h2>
+            <div class="timer-display" id="timerDisplay">15:00</div>
+            <div class="timer-controls">
+                <button class="start-timer" onclick="startTimer()"><i class="fas fa-play"></i></button>
+                <button onclick="stopTimer()"><i class="fas fa-stop"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="alarmSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script> </body>
+</html>
